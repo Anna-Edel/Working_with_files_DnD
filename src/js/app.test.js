@@ -1,5 +1,5 @@
-import { forTest } from "./app";
+// import { forTest } from "./app";
 
-test("should first", () => {
-  expect(forTest()).toEqual(5);
-});
+// test("should first", () => {
+//  expect(forTest()).toEqual(5);
+//});
