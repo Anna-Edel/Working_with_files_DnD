@@ -1,5 +1,5 @@
-// import { forTest } from "./app";
+import { forTest } from "./app";
 
-// test("should first", () => {
-//  expect(forTest()).toEqual(5);
-//});
+test("widget should render", () => {
+    expect(forTest()).toEqual(1);
+  });
