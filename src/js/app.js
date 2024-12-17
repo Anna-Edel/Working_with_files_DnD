@@ -1,3 +1,7 @@
+export function forTest() {
+  return 5;
+}
+
 let btnsAdd = document.querySelectorAll(".block");
 let actualElem;
 let actualElemXY;
@@ -26,7 +30,8 @@ const mouseDown = (e) => {
 
     // Определяем позицию заглушки
     mouseUpItem =
-      actualElem.nextSibling && actualElem.nextSibling.classList.contains("card")
+      actualElem.nextSibling &&
+      actualElem.nextSibling.classList.contains("card")
         ? actualElem.nextSibling
         : newBlock.querySelector(".body--cards");
 
@@ -53,7 +58,7 @@ function createNewCard(text) {
   elem.insertAdjacentHTML(
     "beforeend",
     `<div class="card_text">${text}</div>
-     <button class="card_delete">&#215;</button>`
+     <button class="card_delete">&#215;</button>`,
   );
 
   // Добавляем анимацию удаления
@@ -117,7 +122,7 @@ const onMouseOver = (e) => {
 const onMouseUp = (e) => {
   if (mouseUpItem) {
     const elem = createNewCard(
-      actualElem.querySelector(".card_text").textContent
+      actualElem.querySelector(".card_text").textContent,
     );
 
     if (mouseUpItem.classList.contains("card")) {
@@ -152,7 +157,7 @@ function saveToLocalStorage() {
   const blocks = document.querySelectorAll(".block");
   blocks.forEach((block) => {
     const cards = Array.from(block.querySelectorAll(".card_text")).map(
-      (card) => card.textContent
+      (card) => card.textContent,
     );
     blockData[block.querySelector("h2").textContent] = cards;
   });
